@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CubeProperties
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double side = double.Parse(Console.ReadLine());
+            string parameter = Console.ReadLine().ToLower();
+            CalculateCubeProperties(side, parameter);
+        }
+        private static void CalculateCubeProperties(double side, string parameter)
+        {
+            switch (parameter)
+            {
+                case "face":
+                    double face = Math.Sqrt(2 * side * side);
+                    Console.WriteLine($"{face:f2}");
+                    break;
+                case "space":
+                    double space = Math.Sqrt(3 * side * side);
+                    Console.WriteLine($"{space:f2}");
+                    break;
+                case "volume":
+                    double volume = Math.Pow(side, 3);
+                    Console.WriteLine($"{volume:f2}");
+                    break;
+                case "area":
+                    double area = (Math.Pow(side, 2) * 6);
+                    Console.WriteLine($"{area:f2}");
+                    break;
+            }
+        }
+    }
+}
