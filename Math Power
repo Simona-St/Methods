@@ -1,0 +1,22 @@
+using System;
+
+namespace MathPower
+{
+    class Program
+    {
+
+        static double CalculatePower (double number, double power)
+        {
+            return Math.Pow(number, power);
+        }
+
+        static void Main(string[] args)
+        {
+            double num = double.Parse(Console.ReadLine());
+            double pow = double.Parse(Console.ReadLine());
+
+            double power = CalculatePower(num, pow);
+            Console.WriteLine(power);
+}
+    }
+}
