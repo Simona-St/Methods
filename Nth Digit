@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace NthDigit
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int number = int.Parse(Console.ReadLine());
+            int index = int.Parse(Console.ReadLine());
+
+            FindNthDigit(number, index);
+
+        }
+
+
+        static void FindNthDigit(int number, int index)
+        {
+            int counter = 1;
+
+            do
+            {
+                number = (number / 10);
+                counter++;
+            }
+
+            while (counter < index);
+
+            Console.WriteLine(number % 10);
+        }
+    }
+}
