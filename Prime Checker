@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PrimeChecker
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            long n = long.Parse(Console.ReadLine());
+
+            bool isPrime = false;
+            CheckIfPrime(n, isPrime);
+
+
+           
+        }
+
+        private static bool CheckIfPrime(long n, bool isPrime)
+        {
+
+            for (int i = 1; i < Math.Sqrt(n); i++)
+            {
+                if (n % i == 0)
+                {
+                    isPrime = false;
+
+                    if (n == 2)
+                    {
+                        isPrime = true;
+                    }
+
+                }
+
+                else
+                {
+                    isPrime = true;
+                }
+
+            }
+            Console.WriteLine(isPrime);
+            return isPrime;
+
+        }
+    }
+}
