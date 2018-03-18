@@ -1,0 +1,22 @@
+using System;
+
+namespace CalculateTriangleArea
+{
+    class Program
+    {
+        static decimal CalculateArea(decimal lenght, decimal height)
+
+        {
+            return (lenght * height) / 2;
+        }
+
+        static void Main()
+        {
+            decimal a = decimal.Parse(Console.ReadLine());
+            decimal h = decimal.Parse(Console.ReadLine());
+            decimal area = CalculateArea(a, h);
+            Console.WriteLine(area);
+
+                  }
+    }
+}
